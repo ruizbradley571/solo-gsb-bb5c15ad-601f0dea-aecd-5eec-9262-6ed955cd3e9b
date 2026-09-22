@@ -1,0 +1,9 @@
+.git
+__pycache__
+*.pyc
+.pytest_cache
+tests
+*.db
+*.db-wal
+*.db-shm
+telemetry.db

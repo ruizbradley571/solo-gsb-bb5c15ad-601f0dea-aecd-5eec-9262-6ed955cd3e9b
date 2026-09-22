@@ -1,0 +1,15 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      WINDOW_SIZE_SECONDS: "60"
+      ALLOWED_LATENESS_SECONDS: "30"
+      DB_PATH: /data/telemetry.db
+    volumes:
+      - telemetry-data:/data
+    restart: unless-stopped
+
+volumes:
+  telemetry-data:
